@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter",
     "test": "npx mocha --parallel --exit test/",
     "test:dev": "npx mocha test/ -w",
     "test:cov": "npx nyc --reporter=html --reporter=text npm test"
@@ -21,8 +22,8 @@
     "chai": "^4.2.0",
     "lokijs": "^1.5.11",
     "mocha": "^8.2.1",
-    "npx": "^10.2.2",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.3"
+    "sinon": "^9.2.3",
+    "mocha-jenkins-reporter": "0.4.7"
   }
 }
